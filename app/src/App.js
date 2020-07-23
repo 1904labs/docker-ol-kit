@@ -6,7 +6,6 @@ import {
   LayerPanel, 
   loadDataLayer 
 } from '@bayer/ol-kit'
-import MyLayerPanelActions from './LayerPanelActions'
 
 class App extends Component {
 
@@ -35,7 +34,7 @@ class App extends Component {
       <Map onMapInit={this.onMapInit} >
         <Controls />
         <Popup />
-        <LayerPanel customActions={MyLayerPanelActions} onFileImport={this.addLayerFromFile} />
+        <LayerPanel onFileImport={this.addLayerFromFile} />
       </Map>
     )
   }
