@@ -31,7 +31,3 @@ RUN set -ex && \
     mv /opt/app/build/* /usr/share/nginx/html/
 
 WORKDIR  /usr/share/nginx/html
-
-# set this env variable to point to a geoserver url to add a wfs layer
-ENV REACT_APP_GEOSERVER=
-ENV REACT_APP_WFS_URL=

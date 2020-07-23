@@ -6,23 +6,24 @@ import {
   LayerPanel, 
   loadDataLayer 
 } from '@bayer/ol-kit'
+import MyLayerPanelActions from './LayerPanelActions'
 
 class App extends Component {
 
   addLayerOnLoaded = async (ev) => {
     const map = this.state.map
     const fileName =  ev.target.fileName
-    let content = ev.target.result
-    let layer = await loadDataLayer(map, content, { addToMap: false })
+    const content = ev.target.result
+    const layer = await loadDataLayer(map, content, { addToMap: false })
     layer.set('title', fileName)
     map.addLayer(layer)
   }
   
   addLayerFromFile = (file) => {
-    let fileData = new FileReader();
+    const fileData = new FileReader()
     fileData.fileName = file.name
-    fileData.onloadend = this.addLayerOnLoaded;
-    fileData.readAsText(file);
+    fileData.onloadend = this.addLayerOnLoaded
+    fileData.readAsText(file)
   }
 
   onMapInit = (map) => {
@@ -34,7 +35,7 @@ class App extends Component {
       <Map onMapInit={this.onMapInit} >
         <Controls />
         <Popup />
-        <LayerPanel onFileImport={this.addLayerFromFile} />
+        <LayerPanel customActions={MyLayerPanelActions} onFileImport={this.addLayerFromFile} />
       </Map>
     )
   }
