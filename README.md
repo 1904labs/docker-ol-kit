@@ -8,15 +8,22 @@ This container enables running a standalone ol-kit app with the ability to dynam
 
 ## To run this image  
 
-- docker run -p 8000:80 1904labs/ol-kit:latest  
+```bash
+docker run -p 8000:80 1904labs/ol-kit:latest  
+```
 
 ## To build this image locally
 
 - clone this repository  
-- docker build . -t ol-kit:latest  
-- docker run -p 8000:80 ol-kit:latest  
 
-## To run the ol-kit app via npm
+```bash
+docker build . -t ol-kit:latest  
+docker run -p 8000:80 ol-kit:latest  
+```
+
+## React developers
+
+If you want to run ol-kit in the npm test server in order to make and test  changes to the React app, you can:  
 
 - install nodejs and npm  
 - clone this repository  
