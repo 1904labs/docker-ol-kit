@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+    geoserver:
+        image: 1904labs/geoserver:2.17.1
+        ports:
+            - "8080:8080"
+
+    ol-kit:
+        image: 1904labs/ol-kit:0.14.0
+        ports:
+            - "8000:80"
