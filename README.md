@@ -49,10 +49,11 @@ You should see the map centered on the United States:
 
  To import a layer first you will need something to import, for this example I downloaded these two files:  
 
-- From: <https://eric.clst.org/tech/usgeojson/>
-  <https://eric.clst.org/assets/wiki/uploads/Stuff/gz_2010_us_040_00_500k.json>  
-- From: <https://datahub.io/core/geo-nuts-administrative-boundaries#data>
-  <https://datahub.io/core/geo-nuts-administrative-boundaries/r/nuts_rg_60m_2013_lvl_1.geojson1>  
+- **File 1**: <https://eric.clst.org/assets/wiki/uploads/Stuff/gz_2010_us_040_00_500k.json>  
+  - Associated ite link: <https://eric.clst.org/tech/usgeojson/>  
+
+- **File 2** <https://datahub.io/core/geo-nuts-administrative-boundaries/r/nuts_rg_60m_2013_lvl_1.geojson1>  
+  - Associated Site Link: <https://datahub.io/core/geo-nuts-administrative-boundaries#data>  
 
 Once you have those files (or any other geojson or kml files you wish to import), Click the three button menu in the layers panel and select import.  
 ![menu open](https://raw.githubusercontent.com/1904labs/docker-ol-kit/master/images/menuopen.png)  
